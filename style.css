@@ -1,0 +1,108 @@
+@import url(fonts/icons.css);
+
+* {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    background-color: rgb(10, 10, 10);
+    
+    font-family: monospace
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 2px dashed #f8cbfc;
+}
+
+#who {
+    color: #f9eefa;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#footer {
+    color: #f9eefa;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: rgb(20 20 20 / 32%);
+    border: 2px solid rgb(20, 20, 20);
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 20px;
+    color: #f9eefa;
+    cursor: pointer;
+    margin:5px;
+    transition: all 0.2s ease-in-out;
+}
+
+a {
+    text-decoration: none;
+    color: #f9eefa;
+    font-family: monospace;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:row;
+}
+
+.icon {
+    padding: 5px;
+    font-style: normal;
+    border: 2px dashed;
+    color: #f8cbfc;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border-radius: 50%;
+    background-color: rgba(248, 203, 252, 0.3);
+    margin-right: 10px;
+
+}
+
+button:hover {
+    background-color: rgb(20 20 20 / 50%);
+    border: 2px solid rgb(20, 20, 20);
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 25px;
+    color: #f9eefa;
+    cursor: pointer;
+    margin:5px;
+}
+
+@media (max-width: 810px) {
+    .flexbox {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 400px) { 
+    #who {
+        font-size: 20px;
+    }
+    #footer {
+        display: none;
+    }
+} 
