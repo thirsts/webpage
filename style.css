@@ -1,15 +1,12 @@
 @import url(fonts/icons.css);
+@import url(variables.css);
 
 * {
   margin: 0;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
-  background-color: rgb(10, 10, 10);
+  background-color: var(--bg-color);
   font-family: monospace;
 }
 
@@ -18,53 +15,51 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100svh;
+  padding: 0 1em;
 }
 
 img {
-  width: 150px;
-  height: 150px;
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 20px;
-  border: 2px dashed #f8cbfc;
+  border: var(--img-border);
+  max-width: 150px;
 }
 
 #who {
-  color: #f9eefa;
-  font-size: 30px;
+  color: var(--text-color);
+  font-size: clamp(25px, 8vw, 30px);
   margin-bottom: 10px;
 }
 
 #footer {
-  color: #f9eefa;
-  font-size: 20px;
-  margin-top: 20px;
+  color: var(--text-color-light);
+  font-size: clamp(12px, 8vw, 20px);;
   margin-bottom: 20px;
 }
 
 button {
-  background-color: rgb(20 20 20 / 32%);
-  border: 2px solid rgb(20, 20, 20);
+  background-color: var(--btn-bg);
+  border: var(--btn-border);
   border-radius: 5px;
   padding: 15px;
-  font-size: 20px;
-  color: #f9eefa;
+  font-size: clamp(18px, 2vw, 20px);
+  color: var(--btn-color);
   cursor: pointer;
   margin: 5px;
   transition: all 0.2s ease-in-out;
+  
 }
 
 a {
   text-decoration: none;
-  color: #f9eefa;
+  color: var(--ahref-color);
   font-family: monospace;
 }
 
 .flexbox {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: row;
 }
 
@@ -72,36 +67,23 @@ a {
   padding: 5px;
   font-style: normal;
   border: 2px dashed;
-  color: #f8cbfc;
+  color: var(--icon-color);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   border-radius: 50%;
-  background-color: rgba(248, 203, 252, 0.3);
+  background-color: var(--icon-bg);
   margin-right: 10px;
 }
 
 button:hover {
-  background-color: rgb(20 20 20 / 50%);
-  border: 2px solid rgb(20, 20, 20);
+  background-color: var(--btn-hover-bg);
   border-radius: 5px;
   padding: 20px;
-  font-size: 25px;
-  color: #f9eefa;
-  cursor: pointer;
-  margin: 5px;
+  font-size: clamp(20px, 2vw, 25px);;
 }
 
-@media (max-width: 810px) {
+@media (max-width: 870px) {
   .flexbox {
     flex-direction: column;
-  }
-}
-
-@media (max-width: 400px) {
-  #who {
-    font-size: 20px;
-  }
-  #footer {
-    display: none;
   }
 }
