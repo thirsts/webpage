@@ -5,3 +5,7 @@
 ```diff
 + hey, if you want to add something modify index.html, style.css or fonts/icons.css
 ```
+```diff
++ todo
+- add mobile friendly ness (its broken still i think)
+```
