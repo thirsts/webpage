@@ -3,9 +3,6 @@
 <h1 align="center">i agree this is the best com kid website.</h1>
 
 ```diff
-+ hey, if you want to add something modify index.html, style.css or fonts/icons.css
-```
-```diff
 + todo
 - add mobile friendly ness (its broken still i think)
 ```
