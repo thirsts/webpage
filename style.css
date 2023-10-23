@@ -35,7 +35,7 @@ img {
 
 #footer {
   color: var(--text-color-light);
-  font-size: clamp(12px, 8vw, 20px);;
+  font-size: clamp(12px, 8vw, 20px);
   margin-bottom: 20px;
 }
 
@@ -47,9 +47,10 @@ button {
   font-size: clamp(18px, 2vw, 20px);
   color: var(--btn-color);
   cursor: pointer;
+  font-family: monospace;
   margin: 5px;
   transition: all 0.2s ease-in-out;
-  
+  display: inline;
 }
 
 a {
@@ -79,11 +80,14 @@ button:hover {
   background-color: var(--btn-hover-bg);
   border-radius: 5px;
   padding: 20px;
-  font-size: clamp(20px, 2vw, 25px);;
+  font-size: clamp(20px, 2vw, 25px);
 }
 
 @media (max-width: 870px) {
   .flexbox {
     flex-direction: column;
+  }
+  button {
+    width: 100%;
   }
 }
