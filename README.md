@@ -1,1 +1,1 @@
-![image](https://github.com/thirsts/webpage/assets/110311925/adf15c11-7ccc-45cc-a209-91acc682f1e7)
+![image](https://github.com/thirsts/webpage/assets/110311925/e7aa6cbb-4513-4521-834f-67ec8cc6fd19)
