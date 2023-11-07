@@ -1,93 +1,135 @@
 @import url(fonts/icons.css);
 @import url(variables.css);
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
 
 * {
-  margin: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--bg-color);
-  font-family: monospace;
+    background-color: var(--bg-color);
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    font-family: monospace;
 }
 
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  min-height: 100svh;
-  padding: 0 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100svh;
+    padding: 0 1em;
 }
 
 img {
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  border: var(--img-border);
-  max-width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: var(--img-border);
+    max-width: 150px;
 }
 
 #who {
-  color: var(--text-color);
-  font-size: clamp(25px, 8vw, 30px);
-  margin-bottom: 10px;
+    color: var(--text-color);
+    font-size: clamp(25px, 8vw, 30px);
+    margin-bottom: 10px;
 }
 
 #footer {
-  color: var(--text-color-light);
-  font-size: clamp(12px, 8vw, 20px);
-  margin-bottom: 20px;
+    color: var(--text-color-light);
+    font-size: clamp(12px, 8vw, 20px);
+    margin-bottom: 20px;
 }
 
 button {
-  background-color: var(--btn-bg);
-  border: var(--btn-border);
-  border-radius: 5px;
-  padding: 15px;
-  font-size: clamp(18px, 2vw, 20px);
-  color: var(--btn-color);
-  cursor: pointer;
-  font-family: monospace;
-  margin: 5px;
-  transition: all 0.2s ease-in-out;
-  display: inline;
+    background-color: var(--btn-bg);
+    border: var(--btn-border);
+    border-radius: 5px;
+    padding: 15px;
+    font-size: clamp(18px, 2vw, 20px);
+    color: var(--btn-color);
+    cursor: pointer;
+    font-family: monospace;
+    margin: 5px;
+    transition: all 0.2s ease-in-out;
+    display: inline;
 }
 
 a {
-  text-decoration: none;
-  color: var(--ahref-color);
-  font-family: monospace;
+    text-decoration: none;
+    color: var(--ahref-color);
+    font-family: monospace;
 }
 
 .flexbox {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 .icon {
-  padding: 5px;
-  font-style: normal;
-  border: 2px dashed;
-  color: var(--icon-color);
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  border-radius: 50%;
-  background-color: var(--icon-bg);
-  margin-right: 10px;
+    padding: 5px;
+    font-style: normal;
+    border: 2px dashed;
+    color: var(--icon-color);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border-radius: 50%;
+    background-color: var(--icon-bg);
+    margin-right: 10px;
 }
 
 button:hover {
-  background-color: var(--btn-hover-bg);
-  border-radius: 5px;
-  padding: 20px;
-  font-size: clamp(20px, 2vw, 25px);
+    background-color: var(--btn-hover-bg);
+    border-radius: 5px;
+    padding: 20px;
+    font-size: clamp(20px, 2vw, 25px);
+}
+
+::selection {
+    background-color: var(--selection)
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 4px;
+    height: 4px
+}
+
+::-webkit-scrollbar-button {
+    display: none
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-bar)
 }
 
 @media (max-width: 870px) {
-  .flexbox {
-    flex-direction: column;
-  }
-  button {
-    width: 100%;
-  }
+    .flexbox {
+        flex-direction: column;
+    }
+    button {
+        width: 100%;
+    }
 }
